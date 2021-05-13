@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_bulb">
+
+    <fragment
+        android:id="@+id/navigation_bulb"
+        android:name="com.zvonimirplivelic.bulbz.ui.FlashlightFragment"
+        android:label="@string/title_flashlight"
+        tools:layout="@layout/fragment_flashlight" />
+
+    <fragment
+        android:id="@+id/navigation_potentiometer"
+        android:name="com.zvonimirplivelic.bulbz.ui.PotentiometerFragment"
+        android:label="@string/title_potentiometer"
+        tools:layout="@layout/fragment_potentiometer" />
+
+    <fragment
+        android:id="@+id/navigation_emergency"
+        android:name="com.zvonimirplivelic.bulbz.ui.EmergencyFragment"
+        android:label="@string/title_emergency"
+        tools:layout="@layout/fragment_emergency" />
+
+    <fragment
+        android:id="@+id/navigation_sos"
+        android:name="com.zvonimirplivelic.bulbz.ui.EmergencyFragment"
+        android:label="@string/title_emergency"
+        tools:layout="@layout/fragment_emergency" />
+
+    <fragment
+        android:id="@+id/navigation_lightshow"
+        android:name="com.zvonimirplivelic.bulbz.ui.EmergencyFragment"
+        android:label="@string/title_emergency"
+        tools:layout="@layout/fragment_emergency" />
+
+
+</navigation>

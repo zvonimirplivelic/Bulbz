@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Bulbz</string>
+    <string name="title_flashlight">Flashlight</string>
+    <string name="title_potentiometer">Potentiometer</string>
+    <string name="title_emergency">Emergency</string>
+    <string name="title_sos">S.O.S.</string>
+    <string name="title_lightshow">Light show</string>
+</resources>
