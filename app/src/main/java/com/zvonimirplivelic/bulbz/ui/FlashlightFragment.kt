@@ -13,20 +13,20 @@ import kotlinx.android.synthetic.main.fragment_flashlight.view.*
 
 class FlashlightFragment : Fragment() {
     private var lightOn = false
-    private lateinit var clFlashlight: ConstraintLayout
-    private lateinit var ivFlashlight: ImageView
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         return inflater.inflate(R.layout.fragment_flashlight, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        ivFlashlight = view.findViewById(R.id.iv_flashlight)
-        clFlashlight = view.findViewById(R.id.cl_flashlight_layout)
+        val ivFlashlight: ImageView = view.findViewById(R.id.iv_flashlight)
+        val clFlashlight: ConstraintLayout = view.findViewById(R.id.cl_flashlight_layout)
 
         ivFlashlight.setOnClickListener {
             lightOn = if (lightOn) {
