@@ -16,4 +16,9 @@ class EmergencyFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_emergency, container, false)
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+    }
 }
