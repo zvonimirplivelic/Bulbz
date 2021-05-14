@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="150dp"
         android:gravity="center"
-        android:text="Press the switch in the middle to turn on/off the lights"
+        android:text="Press switch in the middle to turn on/off the lights"
         android:textColor="@android:color/darker_gray"
         app:layout_constraintBottom_toTopOf="@id/switch_emergency"
         app:layout_constraintLeft_toLeftOf="parent"

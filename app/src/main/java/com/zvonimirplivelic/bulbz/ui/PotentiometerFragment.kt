@@ -10,8 +10,6 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import com.zvonimirplivelic.bulbz.R
 
-const val TAG = "POTFRAG"
-
 class PotentiometerFragment : Fragment() {
 
     override fun onCreateView(
