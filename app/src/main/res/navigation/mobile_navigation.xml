@@ -25,13 +25,13 @@
 
     <fragment
         android:id="@+id/navigation_sos"
-        android:name="com.zvonimirplivelic.bulbz.ui.EmergencyFragment"
+        android:name="com.zvonimirplivelic.bulbz.ui.SosFragment"
         android:label="@string/title_emergency"
         tools:layout="@layout/fragment_emergency" />
 
     <fragment
         android:id="@+id/navigation_lightshow"
-        android:name="com.zvonimirplivelic.bulbz.ui.EmergencyFragment"
+        android:name="com.zvonimirplivelic.bulbz.ui.LightshowFragment"
         android:label="@string/title_emergency"
         tools:layout="@layout/fragment_emergency" />
 
