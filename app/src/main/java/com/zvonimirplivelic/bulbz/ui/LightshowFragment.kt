@@ -10,12 +10,11 @@ import androidx.appcompat.widget.SwitchCompat
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.zvonimirplivelic.bulbz.R
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 class LightshowFragment : Fragment() {
+
+    private var lightShowJob: Job?= null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,21 +25,27 @@ class LightshowFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val clLightshow = view.findViewById<ConstraintLayout>(R.id.cl_lightshow_layout)
-        val switchLightshow = view.findViewById<SwitchCompat>(R.id.switch_lightshow)
+        val clLightShow = view.findViewById<ConstraintLayout>(R.id.cl_light_show_layout)
+        val switchLightShow = view.findViewById<SwitchCompat>(R.id.switch_light_show)
 
-        switchLightshow.setOnCheckedChangeListener { _, isChecked ->
+        switchLightShow.setOnCheckedChangeListener { _, isChecked ->
             if (!isChecked) {
-                clLightshow.setBackgroundColor(ContextCompat.getColor(context!!, R.color.black))
+                clLightShow.setBackgroundColor(ContextCompat.getColor(context!!, R.color.black))
             } else {
-                val animatedBackground = clLightshow.background as AnimationDrawable
+                val animatedBackground = clLightShow.background as AnimationDrawable
                 animatedBackground.apply {
                     setEnterFadeDuration(1500)
                     setExitFadeDuration(3000)
                     start()
                 }
-
             }
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        if (lightShowJob?.isActive == true) {
+            lightShowJob!!.cancel()
         }
     }
 }

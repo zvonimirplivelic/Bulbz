@@ -32,6 +32,7 @@ class SosFragment : Fragment() {
 
         switchSos?.setOnCheckedChangeListener { _, isChecked ->
             if (!isChecked) {
+                sosJob?.cancel()
                 clSosLayout.setBackgroundColor(
                     ContextCompat.getColor(
                         context!!,

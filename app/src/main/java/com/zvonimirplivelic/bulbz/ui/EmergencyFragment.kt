@@ -34,6 +34,7 @@ class EmergencyFragment : Fragment() {
 
         switchEmergency?.setOnCheckedChangeListener { _, isChecked ->
             if (!isChecked) {
+                emergencyJob?.cancel()
                 topHalf.visibility = View.GONE
                 bottomHalf.visibility = View.GONE
             } else {
